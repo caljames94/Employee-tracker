@@ -20,5 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/connections.ts"]
+  "include": ["src", "src/connections.ts"],
+  "exclude": ["node_modules", "dist"] // Exclude `node_modules` and `dist` directories
+
 }

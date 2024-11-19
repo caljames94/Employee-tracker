@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import DB from './server';
+import DB from './server.js';
 
 const dbInstance = new DB();
 
@@ -209,7 +209,7 @@ interface Department {
 
 interface RoleData {
     titleName: string;
-    salaryAmount: string;
+    salaryAmount: number;
     departmentId: number;
 }
 
