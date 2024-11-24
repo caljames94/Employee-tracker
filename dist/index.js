@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import DB from './server';
+import DB from './server.js';
 const dbInstance = new DB();
 function startProgram() {
     console.log('---------Employee Tracker---------');

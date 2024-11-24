@@ -1,11 +1,17 @@
-import { connectToDb } from './connections';
+import { connectToDb } from './connections.js';
 class DB {
     constructor() { }
+    // had to update connections.ts as your connectToDb function was not returning anything.
+    // also updated the _args to support addNewEmployee function paramsa data type
     async query(sql, _args = []) {
         const client = await connectToDb();
         try {
             const result = await client.query(sql, _args);
             return result;
+        }
+        catch (error) {
+            console.error("Database query error:", error);
+            throw new Error("Failed to execute query.");
         }
         finally {
             client.release();
